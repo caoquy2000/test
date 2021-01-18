@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValidForm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/xxx.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form">
+            <div class="title">
+                Register
+            </div>
+            <form method="post" action="successpage.html" onsubmit="return validation();">
+                <div class="input_wrap">
+                    <label for="input_text">Username</label>
+                    <div class="input_field">
+                        <input type="text" class="input class" id="input_text" name="txtUsername" required>
+                    </div>
+                    
+                </div>
+                <div class="input_wrap">
+                    <label for="input_password">Password</label>
+                    <div class="input_field">
+                        <input type="password" class="input" id="input_password1" name="txtPassword" onkeyup="check()" required>
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <label for="input_text">Re-Password</label>
+                    <div class="input_field">
+                        <input type="password" class="input" id="input_password2" name="txtRePassword" onkeyup="check()" required>
+                        <span id="message"></span>
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <label for="input_text">Email</label>
+                    <div class="input_field">
+                        <input type="text" class="input" id="input_text" name="txtEmail" required>
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <label for="input_text">Phone</label>
+                    <div class="input_field">
+                        <input type="text" class="input" id="input_text" name="txtPhone" required>
+                    </div>
+                </div>
+                <div class="input_sex">
+                    <label for="choose">Sex</label>
+                    <div class="choose_field">
+                        <input type="radio" name="txtSex" id="choose_sex1" value="Male" checked>Male
+                        <input type="radio" name="txtSex" id="choose_sex2" value="Female">Female
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <span class="error_msg">Incorrect username or password. Please try again</span>
+                    <!-- <input type="submit" id="login_btn" class="btn disabled" value="Login" disabled="true"> -->
+                    <input type="submit" id="login_btn" class="btn" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
